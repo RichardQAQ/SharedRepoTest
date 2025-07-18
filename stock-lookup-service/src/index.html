@@ -8,13 +8,26 @@
 </head>
 <body>
     <div class="container">
-        <h1>Stock Lookup Service</h1>
-        <form id="stock-form">
-            <input type="text" id="stock-input" placeholder="Enter stock symbol">
-            <button type="submit">Lookup</button>
-        </form>
-        <div id="stock-display"></div>
-        <div id="error-message"></div>
+        <h1>📈 Stock Lookup Service</h1>
+        <p>Enter a stock symbol (e.g., AAPL, MSFT) to get the latest stock information.</p>
+        <div class="form-group">
+            <input type="text" id="stockSymbol" placeholder="Enter stock symbol" aria-label="Stock Symbol">
+            <button id="lookupButton">🔍 Lookup</button>
+        </div>
+        <div id="stockInfo" class="stock-info"></div>
+        <div id="errorMessage" class="error"></div>
+        
+        <!-- 新增图片和新闻部分 -->
+        <div id="additionalInfo" class="additional-info">
+            <h2>📷 Related Images</h2>
+            <div id="stockImages" class="stock-images">
+                <!-- 图片将通过 JavaScript 动态加载 -->
+            </div>
+            <h2>📰 Latest News</h2>
+            <div id="stockNews" class="stock-news">
+                <!-- 新闻将通过 JavaScript 动态加载 -->
+            </div>
+        </div>
     </div>
     <script type="module" src="js/api.js"></script>
     <script type="module" src="js/utils.js"></script>
