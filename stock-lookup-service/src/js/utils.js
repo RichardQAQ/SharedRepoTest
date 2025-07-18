@@ -16,3 +16,7 @@ export function displayError(message) {
     errorElement.textContent = message;
     errorElement.style.display = 'block';
 }
+
+function formatCurrency(value) {
+    return `$${parseFloat(value).toFixed(2)}`;
+}
